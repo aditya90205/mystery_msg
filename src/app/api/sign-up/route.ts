@@ -1,9 +1,7 @@
 import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/models/User";
-import { ApiResponse } from "@/types/ApiResponse";
 import bcrypt from "bcryptjs";
-import e from "express";
 
 export async function POST(requset: Request) {
   await dbConnect();

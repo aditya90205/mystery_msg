@@ -13,14 +13,14 @@ async function dbConnect(): Promise<void> {
     return;
   } 
 
-  try {
+  try { 
     const db = await mongoose.connect(process.env.MONGODB_URI || '', {})
 
-    console.log(db);
+    // console.log(db);
 
     connection.isConnected = db.connections[0].readyState
 
-    console.log(db.connections);
+    // console.log(db.connections);
     
 
     console.log("DB Connected Successfully");
